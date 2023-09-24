@@ -43,31 +43,3 @@
     transform: scale(0.98);
     border: 2px solid var(--tertiary);
 }
-/* Root styling to ensure the height takes the full viewport height */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/* Container styling to center its contents */
-#search-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-/* Search box styling */
-#searchbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* SVG styling */
-.page-header svg {
-    margin: 0 auto;
-    display: block;
-}
-
