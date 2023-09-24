@@ -53,21 +53,10 @@ html, body {
 #search-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: bottom;
+    align-items: bottom;
     height: 100%;
 }
 
-/* Search box styling */
-#searchbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* SVG styling */
-.page-header svg {
-    margin: 0 auto;
-    display: block;
-}
 
