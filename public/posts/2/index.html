@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>[Deploy Projects] Hugo Blog-fastest static blog on VPS! | UniBlog</title>
+<meta name="keywords" content="VPS, programming, Projects">
+<meta name="description" content="I&rsquo;m too lazy to write separate instruction, so I put them all together, as your&rsquo;re free to copy codes!
+1.prep sudo apt update sudo apt install snapd sudo snap Update Packages: Start by updating your package list to ensure you have the latest version information. sudo apt update Install Snapd: Snapd is the package manager for snaps. Install it using the following command: sudo apt install snapd Enable Snapd: If your system doesn&rsquo;t have snapd enabled by default, you might need to enable it manually: sudo systemctl enable snapd sudo systemctl start snapd Install Hugo: Once Snapd is installed and enabled, you can use Snap to install Hugo.">
+<meta name="author" content="Gary">
+<link rel="canonical" href="https://chagpt-database.vercel.app/posts/2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" integrity="sha256-yd/blfNHwzxt5MW/rJG5omW34YgpBRX1PhxA6yINWSs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href=" /img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png-32x32.png">
+<link rel="apple-touch-icon" href="https://chagpt-database.vercel.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://chagpt-database.vercel.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGCNQ2550D"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-XGCNQ2550D', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="[Deploy Projects] Hugo Blog-fastest static blog on VPS!" />
+<meta property="og:description" content="I&rsquo;m too lazy to write separate instruction, so I put them all together, as your&rsquo;re free to copy codes!
+1.prep sudo apt update sudo apt install snapd sudo snap Update Packages: Start by updating your package list to ensure you have the latest version information. sudo apt update Install Snapd: Snapd is the package manager for snaps. Install it using the following command: sudo apt install snapd Enable Snapd: If your system doesn&rsquo;t have snapd enabled by default, you might need to enable it manually: sudo systemctl enable snapd sudo systemctl start snapd Install Hugo: Once Snapd is installed and enabled, you can use Snap to install Hugo." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chagpt-database.vercel.app/posts/2/" /><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="UniBlog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Deploy Projects] Hugo Blog-fastest static blog on VPS!"/>
+<meta name="twitter:description" content="I&rsquo;m too lazy to write separate instruction, so I put them all together, as your&rsquo;re free to copy codes!
+1.prep sudo apt update sudo apt install snapd sudo snap Update Packages: Start by updating your package list to ensure you have the latest version information. sudo apt update Install Snapd: Snapd is the package manager for snaps. Install it using the following command: sudo apt install snapd Enable Snapd: If your system doesn&rsquo;t have snapd enabled by default, you might need to enable it manually: sudo systemctl enable snapd sudo systemctl start snapd Install Hugo: Once Snapd is installed and enabled, you can use Snap to install Hugo."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://chagpt-database.vercel.app/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "[Deploy Projects] Hugo Blog-fastest static blog on VPS!",
+      "item": "https://chagpt-database.vercel.app/posts/2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[Deploy Projects] Hugo Blog-fastest static blog on VPS!",
+  "name": "[Deploy Projects] Hugo Blog-fastest static blog on VPS!",
+  "description": "I\u0026rsquo;m too lazy to write separate instruction, so I put them all together, as your\u0026rsquo;re free to copy codes!\n1.prep sudo apt update sudo apt install snapd sudo snap Update Packages: Start by updating your package list to ensure you have the latest version information. sudo apt update Install Snapd: Snapd is the package manager for snaps. Install it using the following command: sudo apt install snapd Enable Snapd: If your system doesn\u0026rsquo;t have snapd enabled by default, you might need to enable it manually: sudo systemctl enable snapd sudo systemctl start snapd Install Hugo: Once Snapd is installed and enabled, you can use Snap to install Hugo.",
+  "keywords": [
+    "VPS", "programming", "Projects"
+  ],
+  "articleBody": "I’m too lazy to write separate instruction, so I put them all together, as your’re free to copy codes!\n1.prep sudo apt update sudo apt install snapd sudo snap Update Packages: Start by updating your package list to ensure you have the latest version information. sudo apt update Install Snapd: Snapd is the package manager for snaps. Install it using the following command: sudo apt install snapd Enable Snapd: If your system doesn’t have snapd enabled by default, you might need to enable it manually: sudo systemctl enable snapd sudo systemctl start snapd Install Hugo: Once Snapd is installed and enabled, you can use Snap to install Hugo. sudo snap install hugo Verify Installation: To verify that Hugo was installed successfully, you can use the following command to check its version: hugo version 2. install git sudo apt install git-all hugo new site myblog cd myblog #git init git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1 cd themes/PaperMod git pull echo \"theme = 'PaperMod'\" \u003e\u003e config.yaml hugo server --port=8000 --bind=0.0.0.0 change hugo.tomal / .yaml Posts | PaperMod (adityatelange.github.io)\nbaseURL: 'https://chagpt-database.vercel.app/' title: 'UniBlog' theme: \"PaperMod\" paginate: 5 enableInlineShortcodes: true enableRobotsTXT: true buildDrafts: false buildFuture: false buildExpired: false enableEmoji: true pygmentsUseClasses: true googleAnalytics: \"G-XGCNQ2550D\" ..... After that, start to using apache2 or Nginx\nsudo apt update \u0026\u0026 sudo apt dist-upgrade sudo apt install apache2 apache2-doc apache2-utils systemctl status apache2 ls /etc/apache2/sites-available/ sudo a2dissite 000-default.conf sudo systemctl reload apache2 sudo ufw app list sudo ufw allow 'Apache Full' sudo ufw enable cd /var cd www cd html sudo mkdir myblog cd myblog sudo mkdir public_html sudo mkdir log sudo mkdir backups cd /etc/apache2/sites-available/ sudo nano myblog.conf ### ServerAdmin hougarry@gmail.com ServerName unilux.icu ServerAlias www.unilux.icu DirectoryIndex index.html index.php DocumentRoot /var/www/html/myblog/public_html LogLevel warn ErrorLog /var/www/html/myblog/log/error.log CustomLog /var/www/html/myblog/log/access.log combined ### sudo a2ensite myblog.conf systemctl reload apache2 #copy all the files under /home/ubuntu/myblog/public/ to /var/www/html/myblog/public_html sudo cp -r /home/ubuntu/myblog/public/* /var/www/html/myblog/public_html/ sudo chown -R www-data:www-data /var/www/html/myblog/public_html/ ## site not insecure sudo apt install certbot python3-certbot-apache sudo certbot --apache -d www.unilux.icu ## cd /home/ubuntu/myblog hugo #run hugo to reupdate your config.yml sudo cp -r /home/ubuntu/myblog/public/* /var/www/html/myblog/public_html/ setting nginx or Apache2 sudo rm /etc/nginx/sites-enabled/default sudo vim /etc/nginx/sites-enabled/hugo.conf sudo rm /etc/nginx/sites-enabled/hugo.conf find / -type f -name \"uploads\" 2\u003e/dev/null find / -type d -name \"static\" 2\u003e/dev/null find / -type f -name \"gunicorn_start.sh\" 2\u003e/dev/null server { listen 80; server_name www.unilux.icu; # Adjusted to your IP root /home/ubuntu/; # Assuming 'myblog' is your Hugo project; # Corrected root directory access_log /var/log/nginx/myblog_access.log; error_log /var/log/nginx/myblog_error.log; location /static/ { alias /home/ubuntu/myblog/static/; # Assuming 'myblog' is your Hugo project expires max; access_log off; log_not_found off; } location ~ \\.py$ { return 403; } location / { proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header Host $http_host; proxy_set_header X-NginX-Proxy true; proxy_redirect off; if (!-f $request_filename) { proxy_pass http://101.43.191.16:1313; # Updated to your VPS IP break; } } } ~ ~ #use nginx: sudo nginx -t # to test the configuration sudo nginx -s reload # to reload Nginx with the new configuration sudo /etc/init.d/nginx restart how to run persistently? Method1: use sytemctl\nCertainly, let’s set up your blog so that it continues to run even if you close your Xshell. We’ll use a system manager like systemd to ensure that the Hugo server is always running.\nCreate a Systemd Service File You will need to create a systemd service file to control the Hugo process.\nsudo nano /etc/systemd/system/myblog.service ##find hugo\nThen insert:\n[Unit] Description=MyBlog Hugo Service After=network.target [Service] Type=simple User=ubuntu ExecStart=/snap/bin/hugo server -D --source=/home/ubuntu/myblog --bind=0.0.0.0 --port=1313 Restart=always [Install] WantedBy=multi-user.target Save and exit.\nEnable and Start the Service Enable the service to start on boot and then start it immediately:\nsudo chmod +x /snap/bin/hugo sudo systemctl enable myblog sudo systemctl start myblog Check the Service Status You can use the following command to make sure the service is running:\nsudo systemctl status myblog Restart Nginx Don’t forget to restart nginx to apply any changes you made:\nsudo systemctl restart nginx Test Your Configuration Try accessing your blog from a web browser using your domain.\nsudo systemctl status myblog sudo journalctl -u myblog #method2: use supervisor sudo rm /etc/supervisor/conf.d/myblog.conf sudo vim /etc/supervisor/conf.d/myblog.conf #run supervisor sudo supervisorctl reread sudo supervisorctl update sudo supervisorctl reload sudo /etc/init.d/memcached restart \u0026\u0026 sudo /etc/init.d/nginx restart #check and update ps aux | grep gunicorn python manage.py runserver 0.0.0.0:8000 sudo supervisorctl stop gunicorn allow sfp\nsudo ufw allow OpenSSH # then we can use winscp/transmit to login our website sftp://unilux.icu insert google analytic: Locate the head.html file in your theme. In your case, the file is located at\n/home/ubuntu/myblog/themes/PaperMod/layouts/partials/head.html.\n#insert this ",
+  "wordCount" : "901",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Gary"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chagpt-database.vercel.app/posts/2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "UniBlog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": " /img/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGCNQ2550D"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-XGCNQ2550D');
+</script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://chagpt-database.vercel.app/" accesskey="h" title="UniBlog (Alt + H)">UniBlog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://chagpt-database.vercel.app/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://chagpt-database.vercel.app/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://chagpt-database.vercel.app/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.garyhou2023.info/" title="Info">
+                    <span>Info</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://blog.garyhou2023.info/" title="NotionBlog">
+                    <span>NotionBlog</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://chagpt-database.vercel.app/">Home</a>&nbsp;»&nbsp;<a href="https://chagpt-database.vercel.app/posts/">Posts</a></div>
+    <h1 class="post-title">
+      [Deploy Projects] Hugo Blog-fastest static blog on VPS!
+    </h1>
+    <div class="post-meta">5 min&nbsp;·&nbsp;901 words&nbsp;·&nbsp;Gary
+
+</div>
+  </header> 
+  <div class="post-content"><p>I&rsquo;m too lazy to write separate instruction, so I put them all together, as your&rsquo;re free to copy codes!</p>
+<h1 id="1prep">1.prep<a hidden class="anchor" aria-hidden="true" href="#1prep">#</a></h1>
+<pre tabindex="0"><code>sudo apt update
+sudo apt install snapd
+sudo snap 
+</code></pre><ol>
+<li><strong>Update Packages</strong>: Start by updating your package list to ensure you have the latest version information.</li>
+</ol>
+<pre tabindex="0"><code>   sudo apt update
+</code></pre><ol start="2">
+<li><strong>Install Snapd</strong>: Snapd is the package manager for snaps. Install it using the following command:</li>
+</ol>
+<pre tabindex="0"><code>   sudo apt install snapd
+</code></pre><ol start="3">
+<li><strong>Enable Snapd</strong>: If your system doesn&rsquo;t have snapd enabled by default, you might need to enable it manually:</li>
+</ol>
+<pre tabindex="0"><code>   sudo systemctl enable snapd
+   sudo systemctl start snapd
+</code></pre><ol start="4">
+<li><strong>Install Hugo</strong>: Once Snapd is installed and enabled, you can use Snap to install Hugo.</li>
+</ol>
+<pre tabindex="0"><code>   sudo snap install hugo
+</code></pre><ol start="5">
+<li><strong>Verify Installation</strong>: To verify that Hugo was installed successfully, you can use the following command to check its version:</li>
+</ol>
+<pre tabindex="0"><code>   hugo version 
+</code></pre><h1 id="2-install-git">2. install git<a hidden class="anchor" aria-hidden="true" href="#2-install-git">#</a></h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install git-all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo new site myblog
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> myblog
+</span></span><span class="line"><span class="cl"><span class="c1">#git init</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> themes/PaperMod
+</span></span><span class="line"><span class="cl">git pull
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;theme = &#39;PaperMod&#39;&#34;</span> &gt;&gt; config.yaml  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo server --port<span class="o">=</span><span class="m">8000</span> --bind<span class="o">=</span>0.0.0.0  
+</span></span></code></pre></div><ol>
+<li>change hugo.tomal / .yaml</li>
+</ol>
+<p><a href="https://adityatelange.github.io/hugo-PaperMod/posts/">Posts | PaperMod (adityatelange.github.io)</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">baseURL: <span class="s1">&#39;https://chagpt-database.vercel.app/&#39;</span>
+</span></span><span class="line"><span class="cl">title: <span class="s1">&#39;UniBlog&#39;</span>
+</span></span><span class="line"><span class="cl">theme: <span class="s2">&#34;PaperMod&#34;</span>
+</span></span><span class="line"><span class="cl">paginate: <span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">enableInlineShortcodes: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">enableRobotsTXT: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">buildDrafts: <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">buildFuture: <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">buildExpired: <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">enableEmoji: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">pygmentsUseClasses: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">googleAnalytics: <span class="s2">&#34;G-XGCNQ2550D&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">.....
+</span></span></code></pre></div><p>After that, start to using apache2 or Nginx</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt dist-upgrade
+</span></span><span class="line"><span class="cl">sudo apt install apache2 apache2-doc apache2-utils
+</span></span><span class="line"><span class="cl">systemctl status apache2
+</span></span><span class="line"><span class="cl">ls /etc/apache2/sites-available/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo a2dissite 000-default.conf
+</span></span><span class="line"><span class="cl">sudo systemctl reload apache2
+</span></span><span class="line"><span class="cl">sudo ufw app list
+</span></span><span class="line"><span class="cl">sudo ufw allow <span class="s1">&#39;Apache Full&#39;</span>
+</span></span><span class="line"><span class="cl">sudo ufw <span class="nb">enable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /var
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> www
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> html
+</span></span><span class="line"><span class="cl">sudo mkdir myblog
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> myblog
+</span></span><span class="line"><span class="cl">sudo mkdir public_html
+</span></span><span class="line"><span class="cl">sudo mkdir log
+</span></span><span class="line"><span class="cl">sudo mkdir backups
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /etc/apache2/sites-available/
+</span></span><span class="line"><span class="cl">sudo nano myblog.conf
+</span></span><span class="line"><span class="cl"><span class="c1">###</span>
+</span></span><span class="line"><span class="cl">&lt;VirtualHost *:80&gt;
+</span></span><span class="line"><span class="cl">    ServerAdmin hougarry@gmail.com
+</span></span><span class="line"><span class="cl">    ServerName unilux.icu
+</span></span><span class="line"><span class="cl">    ServerAlias www.unilux.icu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    DirectoryIndex index.html  index.php
+</span></span><span class="line"><span class="cl">    DocumentRoot /var/www/html/myblog/public_html
+</span></span><span class="line"><span class="cl">    LogLevel warn
+</span></span><span class="line"><span class="cl">    ErrorLog /var/www/html/myblog/log/error.log
+</span></span><span class="line"><span class="cl">    CustomLog /var/www/html/myblog/log/access.log combined
+</span></span><span class="line"><span class="cl">&lt;/VirtualHost&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">###</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo a2ensite myblog.conf
+</span></span><span class="line"><span class="cl">systemctl reload apache2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#copy all the files under /home/ubuntu/myblog/public/   to  /var/www/html/myblog/public_html</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo cp -r /home/ubuntu/myblog/public/* /var/www/html/myblog/public_html/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo chown -R www-data:www-data /var/www/html/myblog/public_html/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## site not insecure</span>
+</span></span><span class="line"><span class="cl">sudo apt install certbot python3-certbot-apache
+</span></span><span class="line"><span class="cl">sudo certbot --apache -d www.unilux.icu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">##</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /home/ubuntu/myblog 
+</span></span><span class="line"><span class="cl">hugo   <span class="c1">#run hugo to reupdate your config.yml</span>
+</span></span><span class="line"><span class="cl">sudo cp -r /home/ubuntu/myblog/public/* /var/www/html/myblog/public_html/
+</span></span></code></pre></div><h3 id="setting-nginx-or-apache2">setting nginx or Apache2<a hidden class="anchor" aria-hidden="true" href="#setting-nginx-or-apache2">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo rm /etc/nginx/sites-enabled/default
+</span></span><span class="line"><span class="cl">sudo vim /etc/nginx/sites-enabled/hugo.conf
+</span></span><span class="line"><span class="cl">sudo rm /etc/nginx/sites-enabled/hugo.conf
+</span></span><span class="line"><span class="cl">find / -type f -name <span class="s2">&#34;uploads&#34;</span> 2&gt;/dev/null
+</span></span><span class="line"><span class="cl">find / -type d -name <span class="s2">&#34;static&#34;</span> 2&gt;/dev/null
+</span></span><span class="line"><span class="cl">find / -type f -name <span class="s2">&#34;gunicorn_start.sh&#34;</span> 2&gt;/dev/null
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">server <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    listen 80<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    server_name www.unilux.icu<span class="p">;</span> <span class="c1"># Adjusted to your IP</span>
+</span></span><span class="line"><span class="cl">    root /home/ubuntu/<span class="p">;</span> <span class="c1"># Assuming &#39;myblog&#39; is your Hugo project; # Corrected root directory</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    access_log /var/log/nginx/myblog_access.log<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    error_log /var/log/nginx/myblog_error.log<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">location /static/ <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">alias</span> /home/ubuntu/myblog/static/<span class="p">;</span> <span class="c1"># Assuming &#39;myblog&#39; is your Hugo project</span>
+</span></span><span class="line"><span class="cl">        expires max<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        access_log off<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        log_not_found off<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location ~ <span class="se">\.</span>py$ <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> 403<span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location / <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Real-IP <span class="nv">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-For <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header Host <span class="nv">$http_host</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        proxy_set_header X-NginX-Proxy true<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        proxy_redirect off<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span>!-f <span class="nv">$request_filename</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            proxy_pass http://101.43.191.16:1313<span class="p">;</span> <span class="c1"># Updated to your VPS IP</span>
+</span></span><span class="line"><span class="cl">            break<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">~                                                                                                                              
+</span></span><span class="line"><span class="cl">~
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#use nginx:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo nginx -t <span class="c1"># to test the configuration</span>
+</span></span><span class="line"><span class="cl">sudo nginx -s reload <span class="c1"># to reload Nginx with the new configuration</span>
+</span></span><span class="line"><span class="cl">sudo /etc/init.d/nginx restart
+</span></span></code></pre></div><p>how to run persistently?
+Method1: use sytemctl</p>
+<p>Certainly, let&rsquo;s set up your blog so that it continues to run even if you close your Xshell. We&rsquo;ll use a system manager like <code>systemd</code> to ensure that the Hugo server is always running.</p>
+<ol>
+<li>
+<p><strong>Create a Systemd Service File</strong>
+You will need to create a systemd service file to control the Hugo process.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/systemd/system/myblog.service
+</span></span></code></pre></div><p>##find hugo</p>
+<pre tabindex="0"><code class="language-which" data-lang="which"></code></pre><p>Then insert:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Unit]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Description</span><span class="o">=</span><span class="s">MyBlog Hugo Service</span>
+</span></span><span class="line"><span class="cl"><span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Service]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+</span></span><span class="line"><span class="cl"><span class="na">User</span><span class="o">=</span><span class="s">ubuntu</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStart</span><span class="o">=</span><span class="s">/snap/bin/hugo server -D --source=/home/ubuntu/myblog --bind=0.0.0.0 --port=1313</span>
+</span></span><span class="line"><span class="cl"><span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Install]</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></span></code></pre></div><p>Save and exit.</p>
+</li>
+<li>
+<p><strong>Enable and Start the Service</strong>
+Enable the service to start on boot and then start it immediately:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod +x /snap/bin/hugo
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> myblog
+</span></span><span class="line"><span class="cl">sudo systemctl start myblog
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Check the Service Status</strong>
+You can use the following command to make sure the service is running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status myblog
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Restart Nginx</strong>
+Don&rsquo;t forget to restart nginx to apply any changes you made:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart nginx
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Test Your Configuration</strong>
+Try accessing your blog from a web browser using your domain.</p>
+</li>
+</ol>
+<pre tabindex="0"><code>sudo systemctl status myblog
+sudo journalctl -u myblog
+
+#method2: use supervisor
+
+
+sudo rm /etc/supervisor/conf.d/myblog.conf
+sudo vim /etc/supervisor/conf.d/myblog.conf
+
+
+#run supervisor
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl reload 
+sudo /etc/init.d/memcached restart &amp;&amp; sudo /etc/init.d/nginx restart
+
+#check and update
+ps aux | grep gunicorn
+python manage.py runserver 0.0.0.0:8000
+sudo supervisorctl stop gunicorn
+</code></pre><p>allow sfp</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw allow OpenSSH
+</span></span><span class="line"><span class="cl"><span class="c1"># then we can use winscp/transmit to login our website sftp://unilux.icu</span>
+</span></span></code></pre></div><p>insert google analytic: Locate the <strong><code>head.html</code></strong> file in your theme. In your case, the file is located at</p>
+<p><strong><code>/home/ubuntu/myblog/themes/PaperMod/layouts/partials/head.html</code></strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#insert this </span>
+</span></span><span class="line"><span class="cl">&lt;!-- Google tag <span class="o">(</span>gtag.js<span class="o">)</span> --&gt;
+</span></span><span class="line"><span class="cl">&lt;script async <span class="nv">src</span><span class="o">=</span><span class="s2">&#34;https://www.googletagmanager.com/gtag/js?id=G-XGCNQ2550D&#34;</span>&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl">&lt;script&gt;
+</span></span><span class="line"><span class="cl">  window.dataLayer <span class="o">=</span> window.dataLayer <span class="o">||</span> <span class="o">[]</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">function</span> gtag<span class="o">(){</span>dataLayer.push<span class="o">(</span>arguments<span class="o">)</span><span class="p">;</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl">  gtag<span class="o">(</span><span class="s1">&#39;js&#39;</span>, new Date<span class="o">())</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  gtag<span class="o">(</span><span class="s1">&#39;config&#39;</span>, <span class="s1">&#39;G-XGCNQ2550D&#39;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">&lt;/script&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># up here </span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- /* Misc */<span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- <span class="k">if</span> hugo.IsProduction <span class="p">|</span> or <span class="o">(</span>eq site.Params.env <span class="s2">&#34;production&#34;</span><span class="o">)</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- template <span class="s2">&#34;_internal/google_analytics.html&#34;</span> . <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- template <span class="s2">&#34;partials/templates/opengraph.html&#34;</span> . <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- template <span class="s2">&#34;partials/templates/twitter_cards.html&#34;</span> . <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- template <span class="s2">&#34;partials/templates/schema_json.html&#34;</span> . <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- end -<span class="o">}}</span>
+</span></span></code></pre></div><h3 id="no-need-to-write-articles-directly-into-varwwwhtmlmyblogpublic_html">No need to write articles directly into <code>/var/www/html/myblog/public_html</code>.<a hidden class="anchor" aria-hidden="true" href="#no-need-to-write-articles-directly-into-varwwwhtmlmyblogpublic_html">#</a></h3>
+<p>Step-by-Step Explanation</p>
+<ol>
+<li>
+<p><strong>Hugo Content</strong>: Write your new articles in Hugo&rsquo;s content directory (<code>/home/ubuntu/myblog/content</code>).</p>
+</li>
+<li>
+<p><strong>Hugo Build</strong>: Run Hugo&rsquo;s build command to generate static HTML. This usually puts the HTML in a <code>public</code> directory inside your Hugo project.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo -D
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Sync or Copy</strong>: You then sync or copy these generated HTML files to <code>/var/www/html/myblog/public_html</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cp -r /home/ubuntu/myblog/public/* /var/www/html/myblog/public_html/
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Apache</strong>: Apache will serve files from <code>/var/www/html/myblog/public_html</code>, as defined in your VirtualHost config.</p>
+</li>
+</ol>
+<p>Follow these steps and your articles should be live after that.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://chagpt-database.vercel.app/tags/vps/">VPS</a></li>
+      <li><a href="https://chagpt-database.vercel.app/tags/programming/">programming</a></li>
+      <li><a href="https://chagpt-database.vercel.app/tags/projects/">Projects</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://chagpt-database.vercel.app/posts/first/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>First</span>
+  </a>
+  <a class="next" href="https://chagpt-database.vercel.app/posts/1/">
+    <span class="title">Next »</span>
+    <br>
+    <span>[Deploy Projects] Rocket.Chat -private real-chat on VPS!</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share [Deploy Projects] Hugo Blog-fastest static blog on VPS! on twitter"
+        href="https://twitter.com/intent/tweet/?text=%5bDeploy%20Projects%5d%20Hugo%20Blog-fastest%20static%20blog%20on%20VPS%21&amp;url=http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f&amp;hashtags=VPS%2cprogramming%2cProjects">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share [Deploy Projects] Hugo Blog-fastest static blog on VPS! on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f&amp;title=%5bDeploy%20Projects%5d%20Hugo%20Blog-fastest%20static%20blog%20on%20VPS%21&amp;summary=%5bDeploy%20Projects%5d%20Hugo%20Blog-fastest%20static%20blog%20on%20VPS%21&amp;source=http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share [Deploy Projects] Hugo Blog-fastest static blog on VPS! on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f&title=%5bDeploy%20Projects%5d%20Hugo%20Blog-fastest%20static%20blog%20on%20VPS%21">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share [Deploy Projects] Hugo Blog-fastest static blog on VPS! on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share [Deploy Projects] Hugo Blog-fastest static blog on VPS! on whatsapp"
+        href="https://api.whatsapp.com/send?text=%5bDeploy%20Projects%5d%20Hugo%20Blog-fastest%20static%20blog%20on%20VPS%21%20-%20http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share [Deploy Projects] Hugo Blog-fastest static blog on VPS! on telegram"
+        href="https://telegram.me/share/url?text=%5bDeploy%20Projects%5d%20Hugo%20Blog-fastest%20static%20blog%20on%20VPS%21&amp;url=http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share [Deploy Projects] Hugo Blog-fastest static blog on VPS! on ycombinator"
+        href="https://news.ycombinator.com/submitlink?t=%5bDeploy%20Projects%5d%20Hugo%20Blog-fastest%20static%20blog%20on%20VPS%21&u=http%3a%2f%2fwww.unilux.icu%2fposts%2f2%2f">
+        <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+            <path
+                d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://chagpt-database.vercel.app">database</a></span>
+    <span>
+        Powered by
+        <a href="https://github.com/hougarry/chatgpt-advanced-prompts" rel="noopener" target="_blank">chatgpt-advanced-prompts</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

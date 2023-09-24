@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>VPS on UniBlog</title>
+    <link>https://chagpt-database.vercel.app/tags/vps/</link>
+    <description>Recent content in VPS on UniBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://chagpt-database.vercel.app/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Deploy Projects] Hugo Blog-fastest static blog on VPS!</title>
+      <link>https://chagpt-database.vercel.app/posts/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chagpt-database.vercel.app/posts/2/</guid>
+      <description>I&amp;rsquo;m too lazy to write separate instruction, so I put them all together, as your&amp;rsquo;re free to copy codes!
+1.prep sudo apt update sudo apt install snapd sudo snap Update Packages: Start by updating your package list to ensure you have the latest version information. sudo apt update Install Snapd: Snapd is the package manager for snaps. Install it using the following command: sudo apt install snapd Enable Snapd: If your system doesn&amp;rsquo;t have snapd enabled by default, you might need to enable it manually: sudo systemctl enable snapd sudo systemctl start snapd Install Hugo: Once Snapd is installed and enabled, you can use Snap to install Hugo.</description>
+    </item>
+    
+    <item>
+      <title>[Deploy Projects] Rocket.Chat -private real-chat on VPS!</title>
+      <link>https://chagpt-database.vercel.app/posts/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chagpt-database.vercel.app/posts/1/</guid>
+      <description>🎤 Introduction Hey Techies! 🤖 Want to set up your own chat platform that rivals Slack and Discord? Well, you&amp;rsquo;ve landed at the right place. In this article, we&amp;rsquo;ll go step-by-step to set up Rocket.Chat on your VPS. And guess what? It&amp;rsquo;s easier than assembling IKEA furniture. 🪑 So, buckle up!
+🐧 Installing Rocket.Chat on Linux Server Alrighty, let&amp;rsquo;s get down to business. Fire up that terminal! 🐚
+First, install Rocket.</description>
+    </item>
+    
+  </channel>
+</rss>
