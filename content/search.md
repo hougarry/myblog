@@ -1,8 +1,8 @@
 ---
-title: "Search" # in any language you want
+title: "Search for prompts" # in any language you want
 layout: "search" # is necessary
-url: "/"
+#url: "/"
 # description: "Description for Search"
 summary: "search"
-placeholder: "search for advanced prompts"
+placeholder: "input keywords or role name"
 ---
