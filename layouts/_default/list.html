@@ -30,6 +30,20 @@
 </header>
 {{- end }}
 
+
+{{- if .IsHome }}
+  <!-- Search Box -->
+  <div id="search-box">
+    <input type="text" id="search-input" placeholder="Search...">
+  </div>
+  <!-- Search Results -->
+  <div id="search-results"></div>
+{{- else }}
+  <!-- Existing Content -->
+  {{- if (and site.Params.profileMode.enabled .IsHome) }}
+    {{- partial "index_profile.html" . }}
+  {{- else }}
+
 {{- if .Content }}
 <div class="post-content">
   {{- if not (.Param "disableAnchoredHeadings") }}
